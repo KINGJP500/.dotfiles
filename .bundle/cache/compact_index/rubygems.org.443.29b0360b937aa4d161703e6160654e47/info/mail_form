@@ -1,0 +1,12 @@
+---
+1.0.0 |checksum:795ec5aca87fc00d8d17ff6ce7392503e9633dbe30241a5468893b388e8971d6
+1.1.0 |checksum:c56e7f8307262f89cc1a09bcaa88dfa774d1bad02cc6ab5bdb2a8cc5d5075154
+1.2.0 |checksum:e045e00325375197b8e1acb181d55fa0e7d0916b94fb89d0394ee0ba0e436986
+1.2.1 |checksum:fcf66df72478d9025c62d6c91385bf4d6f34d2d1873c272a3aef4ff5b697b33b
+1.3.0 |checksum:0c0ea45363e8365afc25eb1398859536bafde755ffbbfc64906fdf7981b607e4
+1.4.0 actionmailer:~> 3.0|checksum:181563938b53f0fa8e1df710511e8b26da1d30c377d6fe326f55c5a429e53f35
+1.4.1 actionmailer:~> 3.0|checksum:1194660f7ea38aef015dbc9379aa874b9e16e96819dcdb5920aa3d95e2b524a8
+1.5.0.rc actionmailer:< 5&>= 3.2,activemodel:< 5&>= 3.2|checksum:b780df9d5cd95ac2a9e693561c0a56c575429a313610ff2310df7aac7170d18d,rubygems:> 1.3.1
+1.5.0 actionmailer:< 5&>= 3.2,activemodel:< 5&>= 3.2|checksum:bbeef2d193572dfab866e5067158cb08c437de1142d04c61d899fcd04f4f8529
+1.5.1 actionmailer:< 5&>= 3.2,activemodel:< 5&>= 3.2|checksum:8fcd7bbe3725784a5dfcc1f1d220a04f328a15056de5e172ed9002087117bc7a
+1.6.0 actionmailer:< 5.1&>= 3.2,activemodel:< 5.1&>= 3.2|checksum:f061efd3fa81ae9839f5d0582362af20b55ad9c44fb8d7822fab42b31f6132fb
