@@ -1,38 +1,14 @@
-#If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-set rtp+=$HOME/usr/local/lib/python2.7/site-packages/pkg_resources/powerline/powerline/bindings/zsh/powerline.zsh
-set laststatus=2
-set t_Co=256
-
-# Add Powerline
-#source "$HOME/.config/powerline/powerline.zsh"
-
-
-#Homebrew Python
-export PATH=/usr/local/bin/python:$PATH
-#Homebrew Ruby
-export PATH=/usr/local/Cellar/ruby/1.9.3-p286/bin:$PATH
-#Homebrew (Main homebrew path should be after any other homebrew paths)
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-
-#PYTHONPATH
-#export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-
+export PATH="/Users/KINGJP/Library/Python/3.6/bin:$PATH"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/Users/KINGJP/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
-
-
-#POWERLEVEL9K_DISABLE_RPROMT=true
-POWERLEVEL9K_LEFT_PROMT_ELEMENTS=(time dir rbenv vcs)
-POWERLEVEL9K_DIR_BACKGROUND="cyan"
-
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -61,7 +37,7 @@ POWERLEVEL9K_DIR_BACKGROUND="cyan"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -84,8 +60,8 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git npm brew sudo gem composer rails ruby
-zsh-autosuggestions aws bundler chucknorris mysql-macports pip tmux)
+  git npm brew sudo gem composer rails ruby zsh-autosuggestions aws bundler chucknorris mysql-macports pip tmux
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,6 +97,12 @@ source $ZSH/oh-my-zsh.sh
 #alias db= "cd ~Dropbox"
 #alias zs="source ~/.zshrc"
 #alias gum="git pull upstream master"
+
+#Adding the powerline status
+source /Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+set laststatus=2
+set t_Co=256
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
