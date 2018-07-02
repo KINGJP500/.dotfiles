@@ -2,7 +2,7 @@ export PATH="/Users/KINGJP/Library/Python/3.6/bin:$PATH"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# =================Path to your oh-my-zsh installation.=================
 export ZSH=/Users/KINGJP/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -60,7 +60,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git npm brew sudo gem composer rails ruby zsh-autosuggestions aws bundler chucknorris mysql-macports pip tmux
+  git npm brew sudo gem composer rails ruby zsh-autosuggestions aws bundler mysql-macports pip tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,14 +98,36 @@ source $ZSH/oh-my-zsh.sh
 #alias zs="source ~/.zshrc"
 #alias gum="git pull upstream master"
 
-#Adding the powerline status
+# ================Adding the powerline status===================
 source /Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 set laststatus=2
 set t_Co=256
 
-# Set Spaceship ZSH as a prompt
+# ============ Set Spaceship ZSH as a prompt=============
 autoload -U promptinit; promptinit
 prompt spaceship
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+
+# ================PATH==================
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# =======adding a comment line for mkcd intead of mkdir.========
+mkcd () {
+  case "$1" in
+    */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists
+    /*/../*) (cd "${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd -- "$1";;
+    /*) mkdir -p "$1" && cd "$1";;
+    */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "./$1";;
+    ../*) (cd .. && mkdir -p "${1#.}") && cd "$1";;
+    *) mkdir -p "./$1" && cd "./$1";;
+  esac
+}
+

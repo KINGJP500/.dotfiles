@@ -225,7 +225,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-
 "adding powerline
 set  rtp+=/Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/vim/
 set laststatus=2
