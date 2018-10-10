@@ -18,6 +18,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set encoding=UTF-8
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -33,6 +34,8 @@ syntax on
 " the plugins.
 let mapleader=","
 set timeout timeoutlen=1500
+set guifont=DroidSansMono\ Nerd\ Font:h11
+
 
 " ================ Turn Off Swap Files ==============
 
@@ -74,8 +77,8 @@ set autoindent
 set smartindent
 set smarttab
 set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set softtabstop=4
+set tabstop=4
 set expandtab
 
 filetype plugin on
@@ -192,6 +195,10 @@ Plugin 'airblade/vim-gitgutter'           "add vim-gitgutter
 Plugin 'majutsushi/tagbar'                "add tagbar
 Plugin 'valloric/youcompleteme'           "add vim youcomplete
 Plugin 'honza/vim-snippets'               "add vim snippets
+Plugin 'ryanoasis/vim-webdevicons'           "Adding files icons
+Plugin 'bagrat/vim-workspace'             "vim work space
+Plugin 'mhinz/vim-startify'                 "vim startify
+
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -212,7 +219,7 @@ execute pathogen#infect()
 
 filetype plugin indent on
 set number
-set tabstop=4
+set tabstop=8
 set colorcolumn=210
 colo default
 
@@ -224,7 +231,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
+let g:airline_powerline_fonts = 1
 "adding powerline
 set  rtp+=/Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/vim/
 set laststatus=2

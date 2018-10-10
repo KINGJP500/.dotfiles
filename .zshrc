@@ -106,7 +106,6 @@ set t_Co=256
 
 # ============ Set Spaceship ZSH as a prompt=============
 autoload -U promptinit; promptinit
-prompt spaceship
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
@@ -131,3 +130,7 @@ mkcd () {
   esac
 }
 
+# ====export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# ====export LDFLAGS="-L/usr/local/opt/llvm/lib"
+# ====export CPPFLAGS="-I/usr/local/opt/llvm/include"
