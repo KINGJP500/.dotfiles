@@ -133,4 +133,5 @@ mkcd () {
 # ====export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # ====export LDFLAGS="-L/usr/local/opt/llvm/lib"
+alias xcode="open -a Xcode"
 # ====export CPPFLAGS="-I/usr/local/opt/llvm/include"
