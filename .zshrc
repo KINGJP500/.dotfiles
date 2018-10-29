@@ -1,4 +1,4 @@
-export PATH="/Users/KINGJP/Library/Python/3.6/bin:$PATH"
+export PATH="/Users/KINGJP/Library/Python/3.7/bin:$PATH"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 #alias gum="git pull upstream master"
 
 # ================Adding the powerline status===================
-source /Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+source /Users/KINGJP/Library/Python/3.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 set laststatus=2
 set t_Co=256
@@ -134,4 +134,5 @@ mkcd () {
 
 # ====export LDFLAGS="-L/usr/local/opt/llvm/lib"
 alias xcode="open -a Xcode"
+alias python='python3'
 # ====export CPPFLAGS="-I/usr/local/opt/llvm/include"

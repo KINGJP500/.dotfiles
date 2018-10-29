@@ -1,6 +1,13 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# add powerline to the system
+export PATH=$PATH:$HOME/Library/Python/3.7/bin
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /Users/KINGJP/Library/Python/3.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
