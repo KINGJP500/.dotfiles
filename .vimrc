@@ -27,7 +27,7 @@ set hidden
 
 "turn on syntax highlighting
 syntax on
-color dracula
+colo dracula
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
@@ -222,7 +222,7 @@ filetype plugin indent on
 set number
 set tabstop=8
 set colorcolumn=210
-colo default
+"colo default
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
