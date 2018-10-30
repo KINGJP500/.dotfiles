@@ -30,7 +30,7 @@ set hidden
 "turn on syntax highlighting
 "set background=dark
 "highlight clear 
-"syntax on
+syntax on
 
 "let g:colors_name="onehalfdark"
 "let colors_name="onehalfdark"
@@ -45,7 +45,7 @@ set hidden
 "  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 "  set termguicolors
 "endif
-"colo dracula
+colo desert
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
@@ -96,7 +96,7 @@ set smartcase       " ...unless we type a capital
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=2
+set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
