@@ -199,6 +199,7 @@ Plugin 'ryanoasis/vim-webdevicons'           "Adding files icons
 Plugin 'bagrat/vim-workspace'             "vim work space
 Plugin 'mhinz/vim-startify'                 "vim startify
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'dracula/vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
