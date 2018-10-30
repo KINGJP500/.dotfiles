@@ -20,6 +20,8 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set encoding=UTF-8
 
+"===========================================================
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -43,7 +45,7 @@ set hidden
 "  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 "  set termguicolors
 "endif
-colo dracula
+"colo dracula
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
