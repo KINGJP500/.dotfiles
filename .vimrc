@@ -200,7 +200,7 @@ Plugin 'bagrat/vim-workspace'             "vim work space
 Plugin 'mhinz/vim-startify'                 "vim startify
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'dracula/vim'
-
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
