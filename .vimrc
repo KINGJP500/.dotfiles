@@ -26,19 +26,24 @@ set encoding=UTF-8
 set hidden
 
 "turn on syntax highlighting
-syntax on
-set t_Co=256
-set cursorline
-colorscheme onehalflight
-let g:airline_theme='onehalfdark'
+"set background=dark
+"highlight clear 
+"syntax on
+
+"let g:colors_name="onehalfdark"
+"let colors_name="onehalfdark"
+"set t_Co=256
+"set cursorline
+"colorscheme onehalflight
+"let g:airline_theme='onehalfdark'
 " lightline
 " let g:lightline.colorscheme='onehalfdark'
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-"colo dracula
+"if exists('+termguicolors')
+"  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"  set termguicolors
+"endif
+colo dracula
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
@@ -46,7 +51,9 @@ endif
 let mapleader=","
 set timeout timeoutlen=1500
 set guifont=DroidSansMono\ Nerd\ Font:h11
-
+" or:
+set guifont=DroidSansMono_Nerd_Font:h11
+let g:airline_powerline_fonts = 1
 
 " ================ Turn Off Swap Files ==============
 
@@ -211,6 +218,7 @@ Plugin 'bagrat/vim-workspace'             "vim work space
 Plugin 'mhinz/vim-startify'                 "vim startify
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'dracula/vim'
+Plugin 'jacoborus/tender.vim'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
