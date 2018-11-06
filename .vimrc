@@ -222,11 +222,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'dracula/vim'
 Plugin 'jacoborus/tender.vim'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-call plug#begin()
-
 Plugin 'terryma/vim-multiple-cursors'
-
-call plug#end()
 Plugin 'easymotion/vim-easymotion'
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
