@@ -224,7 +224,6 @@ Plugin 'jacoborus/tender.vim'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
- Plugin 'honza/vim-snippets'
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
