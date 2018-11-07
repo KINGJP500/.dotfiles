@@ -225,6 +225,7 @@ Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'Yggdroot/indentLine'
+Plugin 'gdbmgr'
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
