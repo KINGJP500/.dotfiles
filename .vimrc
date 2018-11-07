@@ -104,14 +104,14 @@ set expandtab
 filetype plugin on
 filetype indent on
 
-" Display tabs and trailing spaces visually
+" ================ Display tabs and trailing spaces visually ================
 set list listchars=tab:\ \ ,trail:·
 
 set linebreak    "Wrap lines at convenient points
 
 " ================ Custom Settings ========================
 
-" Window pane resizing
+"====================  Window pane resizing ======================
 nnoremap <silent> <Leader>[ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>] :exe "resize " . (winheight(0) * 2/3)<CR>
 
@@ -157,7 +157,7 @@ nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 let g:spec_runner_dispatcher = "VtrSendCommand! {command}"
 
-" RSpec.vim mappings
+" =======================  RSpec.vim mappings ===================
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -165,10 +165,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
 
-" For ruby block selections
+" =======================  For ruby block selections ==================
 runtime macros/matchit.vim
 
-" For Running plain Ruby test scripts
+" ===============  For Running plain Ruby test scripts ====================
 nnoremap <leader>r :RunSpec<CR>
 nnoremap <leader>l :RunSpecLine<CR>
 nnoremap <leader>e :RunSpecLastRun<CR>
@@ -224,6 +224,7 @@ Plugin 'jacoborus/tender.vim'
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'Yggdroot/indentLine'
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -256,7 +257,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:airline_powerline_fonts = 1
-"adding powerline
+" ==================== adding powerline =================
 set  rtp+=/Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/vim/
 set laststatus=2
 set showtabline=1
@@ -267,7 +268,7 @@ set t_Co=256
 "Plugin 'powerline/powerline'
 source /Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
-" Adding the powerline configation file
+" ===================== Adding the powerline configation file ==============
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
@@ -277,14 +278,17 @@ set term=xterm-256color
 set termencoding=utf-8
 
 
-" Adding the configuration for mac vim
+" ========================= Adding the configuration for mac vim ======
 if has("gui_running")
    let s:uname = system("uname")
    if s:uname == "Darwin\n"
       set guifont=Inconsolata\ for\ Powerline:h15
    endif
 endif
+" ============================= indentlinecolor =========================
+let g:indentLine_setColors = 0
 
+" =========================  emmet mode =======================
 let g:user_emmet_mode='n'    "only enable normal mode functions.
 let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
