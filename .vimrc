@@ -160,6 +160,9 @@ map <Leader>d "+d
 
 let g:tmux_navigator_no_mappings = 1
 
+" `gf` opens file under cursor in a new vertical split
+nnoremap gf :vertical wincmd f<CR>
+
 nnoremap <silent> {Left-mapping} :TmuxNavigateLeft<cr>
 nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
 nnoremap <silent> {Up-Mapping} :TmuxNavigateUp<cr>
