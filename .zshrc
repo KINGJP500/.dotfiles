@@ -104,6 +104,9 @@ source /Users/KINGJP/Library/Python/3.7/lib/python/site-packages/powerline/bindi
 set laststatus=2
 set t_Co=256
 
+#=============mysql======
+export PATH="/usr/local/Cellar/mysql/8.0.19/lib"
+
 # ============ Set Spaceship ZSH as a prompt=============
 autoload -U promptinit; promptinit
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
