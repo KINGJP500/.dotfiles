@@ -105,7 +105,7 @@ set laststatus=2
 set t_Co=256
 
 #=============mysql======
-export PATH="/usr/local/Cellar/mysql/8.0.19/lib"
+#export PATH="/usr/local/Cellar/mysql/8.0.19/lib"
 
 # ============ Set Spaceship ZSH as a prompt=============
 autoload -U promptinit; promptinit
@@ -148,5 +148,15 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
   
 #======For pkg-config to find readline you may need to set:===
   export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+
+
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+#========For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+#========For pkg-config to find openssl@1.1 you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 
