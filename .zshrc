@@ -160,3 +160,5 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
   export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
