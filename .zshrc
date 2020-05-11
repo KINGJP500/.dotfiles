@@ -1,7 +1,7 @@
 export PATH="/Users/KINGJP/Library/Python/3.7/bin:$PATH"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export RUBYOPT='-W:no-deprecated -W:no-experimental'
 # =================Path to your oh-my-zsh installation.=================
 export ZSH=/Users/KINGJP/.oh-my-zsh
 
@@ -133,6 +133,13 @@ mkcd () {
   esac
 }
 
+# ============================heroku CLI ===
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
 # ====export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # ====export LDFLAGS="-L/usr/local/opt/llvm/lib"
@@ -160,7 +167,23 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
   export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 export PATH="/usr/local/sbin:$PATH"
 
 export PATH="/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/bin/apt:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/v8@3.15/lib"
+export CPPFLAGS="-I/usr/local/opt/v8@3.15/include"
+export LDFLAGS="-L/usr/local/opt/libffi/lib"
+#export CPPFLAGS="-I/usr/local/opt/libfri/include"
+
+#==========  For pkg-config to find icu4c you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
+export PATH="/usr/local/opt/krb5/bin:$PATH"
+export PATH="/usr/local/opt/krb5/sbin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export ENV_VARIABLE_NAME="value"
