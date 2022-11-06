@@ -1,4 +1,4 @@
-" Use Vim settings, rather then Vi settings (much better!).
+"Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
@@ -9,7 +9,7 @@ endif
 
 " ================ General Config ====================
 
-execute pathogen#infect()
+"execute pathogen#infect()
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -139,6 +139,7 @@ nmap <leader>m A # => <Esc>
 "
 vmap <leader>m :norm A # => <Esc>
 
+set rtp+=~/.vim/bundle/nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -181,56 +182,55 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+set rtp+=~/.vim/bundle/ctrlp.vim
+call plug#begin()
 
 
-Plugin 'VundleVim/Vundle.vim'   " let Vundle manage Vundle, required
+"Plug 'VundleVim/Vundle.vim'   " let Vundle manage Vundle, required
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+Plug 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Install L9 and avoid a Naming conflict if you've already installed a
 " Plugin 'ascenator/L9', {'name': 'newL9'}  " different version somewhere else.
-Plugin 'mattn/emmet-vim'                "add this line to your .vimrc file
-Plugin 'Lokaltog/powerline'             "add Powerline with Lokalog
-Plugin 'tpope/vim-surround'             "add the surround vim, :parentheses,brackets
-Plugin 'pangloss/vim-javascript'        " add vim javascript
-Plugin 'ervandew/supertab'              "add super tab
-Plugin 'vim-airline/vim-airline-themes' " add vim airline theme
-Plugin 'altercation/vim-colors-solarized' "add vim colorscheme
-Plugin 'airblade/vim-gitgutter'           "add vim-gitgutter
-Plugin 'majutsushi/tagbar'                "add tagbar
-Plugin 'valloric/youcompleteme'           "add vim youcomplete
-Plugin 'honza/vim-snippets'               "add vim snippets
-Plugin 'ryanoasis/vim-webdevicons'           "Adding files icons
-Plugin 'bagrat/vim-workspace'             "vim work space
-Plugin 'mhinz/vim-startify'                 "vim startify
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'dracula/vim'
-Plugin 'jacoborus/tender.vim'
-Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'Yggdroot/indentLine'
-Plugin 'gdbmgr'
-Plugin 'SirVer/ultisnips'
-Plugin 'tomtom/tcomment_vim'
+Plug 'mattn/emmet-vim'                "add this line to your .vimrc file
+Plug 'Lokaltog/powerline'             "add Powerline with Lokalog
+Plug 'tpope/vim-surround'             "add the surround vim, :parentheses,brackets
+Plug 'pangloss/vim-javascript'        " add vim javascript
+Plug 'ervandew/supertab'              "add super tab
+Plug 'vim-airline/vim-airline-themes' " add vim airline theme
+Plug 'altercation/vim-colors-solarized' "add vim colorscheme
+Plug 'airblade/vim-gitgutter'           "add vim-gitgutter
+Plug 'majutsushi/tagbar'                "add tagbar
+Plug 'valloric/youcompleteme'           "add vim youcomplete
+Plug 'honza/vim-snippets'               "add vim snippets
+Plug 'ryanoasis/vim-webdevicons'           "Adding files icons
+Plug 'bagrat/vim-workspace'             "vim work space
+Plug 'mhinz/vim-startify'                 "vim startify
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'dracula/vim'
+Plug 'jacoborus/tender.vim'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'Yggdroot/indentLine'
+Plug 'gdbmgr'
+Plug 'SirVer/ultisnips'
+Plug 'tomtom/tcomment_vim'
+Plug 'preservim/NERDTree'
 "All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -244,7 +244,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " adding the pathogen,#syntax line
-execute pathogen#infect()
+"execute pathogen#infect()
 
 filetype plugin indent on
 set number
@@ -256,21 +256,22 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:statline_syntastic = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:airline_powerline_fonts = 1
 " ==================== adding powerline =================
-set  rtp+=/Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/vim/
-set laststatus=2
+"set  rtp+=/Library/Python/3.8/site-packages/powerline/bindings/vim/
+"set laststatus=2
 set showtabline=1
 set noshowmode
 set t_Co=256
 
 " installing the powerline
 "Plugin 'powerline/powerline'
-source /Users/KINGJP/Library/Python/3.6/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"source /Users/KINGJP/Library/Python/3.8.9/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 " ===================== Adding the powerline configation file ==============
 set guifont=Inconsolata\ for\ Powerline:h15
@@ -318,3 +319,4 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+

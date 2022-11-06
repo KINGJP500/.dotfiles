@@ -1,4 +1,4 @@
-export PATH="/Users/KINGJP/Library/Python/3.7/bin:$PATH"
+export PATH="/Users/moneyndbag/Library/Python/3.8/bin:$PATH"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export RUBYOPT='-W:no-deprecated -W:no-experimental'
@@ -99,8 +99,13 @@ source $ZSH/oh-my-zsh.sh
 #alias gum="git pull upstream master"
 
 # ================Adding the powerline status===================
-source /Users/KINGJP/Library/Python/3.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
+export TERM=”screen-256color”
+powerlline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source /Users/moneyndbag//Library/Python/3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+. /Library/Python/3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 set laststatus=2
 set t_Co=256
 
@@ -187,3 +192,5 @@ export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export ENV_VARIABLE_NAME="value"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+alias cls="clear" 
