@@ -65,3 +65,4 @@ alias xcode="open -a Xcode"
 
 #For pkg-config to find libffi you may need to set:                                                     
   export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
+alias cls="clear"
